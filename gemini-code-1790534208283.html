@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسعى | MASAA - منصة التعليم الإلكتروني</title>
+    <!-- FontAwesome للايقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS الخاص بالمنصة -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- القائمة الجانبية (Sidebar) -->
+    <aside class="sidebar" id="sidebar">
+        <div class="brand-container">
+            <img src="1000194952.png" alt="مسعى | MASAA" class="brand-logo">
+            <div class="brand-tagline">تعليم أقرب… متابعة أكبر… وطريق أوضح.</div>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+            <!-- يتم إنشاؤه ديناميكياً بواسطة JavaScript بناءً على صلاحيات المستخدم -->
+        </ul>
+    </aside>
+
+    <!-- المحتوى الرئيسي (Main View) -->
+    <div class="main-content">
+        <header>
+            <div class="header-title">
+                <button class="toggle-btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+                <h2 id="pageTitle">مسعى | MASAA</h2>
+            </div>
+            
+            <div class="header-actions">
+                <!-- شريط البحث السريع -->
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="بحث شامل..." onkeyup="handleSearch(this.value)">
+                </div>
+
+                <!-- تبديل الأدوار للعرض والتحقق والتجربة -->
+                <div class="user-profile">
+                    <select id="roleSwitcher" class="form-control" onchange="switchRole(this.value)">
+                        <option value="admin">المدير (Admin)</option>
+                        <option value="teacher">المعلم (Teacher)</option>
+                        <option value="student">الطالب (Student)</option>
+                        <option value="parent">ولي الأمر (Parent)</option>
+                    </select>
+                    <span class="role-badge" id="currentRoleBadge">ADMIN</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- جسم الصفحة الديناميكي -->
+        <main class="content-body" id="appBody">
+            <!-- يتم تحميل الواجهات هنا ديناميكياً -->
+        </main>
+    </div>
+
+    <!-- JavaScript الخاص بالمنصة -->
+    <script src="script.js"></script>
+</body>
+</html>
